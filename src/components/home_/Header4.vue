@@ -1,32 +1,60 @@
 <template>
+  <div>
     <div>
-      <p class="text-center justify-center pt-20 text-4xl font-bold">
-        <span class="text-blue-700">Reviews </span>
-        <span class="text-black">of People Who Have <br> Found Job Through Chakri</span>
+      <p class="text-center justify-center pt-20 text-4xl font-semibold">
+        <span class="text-blue-700 px-2">Featured</span>
+        <span>Job Circulars</span>
       </p>
-      <div>
-        <section class="bg-white dark:bg-gray-900">
-          <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
-            <figure class="max-w-screen-md mx-auto">
-              <svg class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.017 18V10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983V18H0Z" fill="currentColor" />
-              </svg>
-              <blockquote>
-                <p class="text-2xl font-medium text-gray-900 dark:text-white">{{ currentTestimonial.testimony }}</p>
-              </blockquote>
-              <figcaption class="flex items-center justify-center mt-6 space-x-3">
-                <img class="w-6 h-6 rounded-full" :src="currentTestimonial.image" alt="profile picture">
-                <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                  <div class="pr-3 font-medium text-gray-900 dark:text-white">{{ currentTestimonial.name }}</div>
-                  <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">{{ currentTestimonial.position }}</div>
-                </div>
-              </figcaption>
-            </figure>
+    </div>
+    <div class="max-w-7xl mx-auto p-5 h-screen overflow-y-auto">
+      <div class="flex flex-col items-center">
+        <div
+          v-for="(item, index) in cardsDitaillsArray"
+          :key="index"
+          class="flex-1 m-3 p-3 border-2 border-gray-50 rounded-lg w-72 mt-3"
+        >
+          <div class="mb-8 pb-4 flex items-center">
+            <img
+              :src="item.companyLogo"
+              alt=""
+              class="rounded-3xl w-20 h-20"
+            />
+            <div class="ml-2">
+              <span class="block text-3xl font-semibold group-hover:text-white">{{ item.name }}</span>
+              <span class="font-medium text-xl align-top">{{ item.location }}</span>
+            </div>
           </div>
-        </section>
+          <div>
+            <div>
+              <p class="font-semibold text-2xl justify-center items-center group-hover:text-white">
+                Visual Designer
+              </p>
+              <p class="group-hover:text-white">{{ item.category }}</p>
+              <br />
+              <p class="group-hover:text-white">
+                {{ item.s_discription }}
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="my-7 flex">
+              <p class="font-semibold text-xl mt-20 align-middle group-hover:text-white">
+                <span>$</span>
+                <span>{{ item.amount }}</span>
+              </p>
+              <p
+                class="ms-8 text-blue-800 rounded-lg bg-blue-100 py-2 px-4 font-semibold hover:bg-blue-700 hover:text-white"
+              >
+                Apply Now
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </template>
+  </div>
+</template>
+
   
   <script setup>
   import { ref, onMounted, onUnmounted } from 'vue';
@@ -66,5 +94,17 @@
     });
   });
   </script>
+  <style scoped>
+  .max-w-7xl {
+    max-width: 100%;
+  }
+  .h-screen {
+    height: 100vh;
+  }
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
+  </style>
+  
   
   

@@ -6,11 +6,11 @@
           <span>Job Circulars</span>
         </p>
       </div>
-      <div class="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div class="max-w-7xl justify-center mx-auto p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div
           v-for="(item, index) in cardsDitaillsArray"
           :key="index"
-          class="flex-1 m-3 p-3 border-2 border-gray-50 rounded-lg w-60 justify-center"
+          class="flex-1 m-3 p-3 border-2 border-gray-50 rounded-lg w-72 mt-3 justify-center"
         >
           <div class="mb-8 pb-4 flex items-center">
             <img
