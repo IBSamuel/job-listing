@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import NavBar from "@/components/admin/Navbar.vue";
+import axios from 'axios';
 
 
 const jobTitle = ref("");
@@ -28,11 +29,18 @@ const handleSubmit = () => {
     jobDiscription: jobDiscription.value,
     companyName: companyName.value,
     establishmentYear: establishmentYear.value,
-    noOfEmployees: noOfEmployees.value
+    noOfEmployees: noOfEmployees.value,
+    user_id: 1,
   };
 
   // Log the array to the console
   console.log(formData);
+  axios.post('http://127.0.0.1:8000/api/job', formData)
+  .then((result) => {
+    console.log(result);
+  }).catch((err) => {
+    console.log(err);
+  });
 };
 
 const getLocation = () => {

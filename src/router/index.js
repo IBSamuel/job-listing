@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import HomePage from '@/views/HomePage.vue'
 import Post from '@/views/JobPosting.vue'
 import Signin from '@/views/SignIn.vue'
+import Signup from '@/views/SignUp.vue'
+import Search from '@/views/SearchJob.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,6 +17,8 @@ const router = createRouter({
     {path: '/home',component: HomePage},
     {path: '/post',component: Post},
     {path: '/admin/signin',component: Signin},
+    {path: '/admin/signup',component: Signup},
+    {path: '/search',component: Search},
     {
       path: '/about',
       name: 'about',

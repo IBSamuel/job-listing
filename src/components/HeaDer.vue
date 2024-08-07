@@ -27,7 +27,7 @@
               class="flex-shrink-0 z-10 inline-flex items-center py-2 px-5 text-sm font-medium text-center bg-gray-100 border border-e-0 border-gray-300 rounded-s-full hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300"
               type="button"
             >
-              Location <i className="fa-solid fa-location-dot text-2xl"></i>
+              Location <i className="px-4 fa-solid fa-location-dot text-2xl"></i>
             </button>
             <div
               id="dropdown"

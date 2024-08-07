@@ -1,10 +1,12 @@
 <script setup>
-import NavBar from '@/components/home_/NavBar.vue';
-import HeaDer from '@/components/home_/HeaDer.vue';
-import HeaDer2 from '@/components/home_/HeaDer2.vue';
-import Header3 from '@/components/home_/Header3.vue';
-import Header4 from '@/components/home_/Header4.vue';
-import FooTer from '@/components/home_/FooTer.vue';
+import NavBar from '@/components/NavBar.vue';
+import HeaDer from '@/components/HeaDer.vue';
+import HeaDer2 from '@/components/HeaDer2.vue';
+import Header3 from '@/components/Header3.vue';
+import Header4 from '@/components/Header4.vue';
+import FifthHeader from '@/components/FifthHeader.vue';
+
+import FooterPage from '@/components/FooterPage.vue';
 </script>
 
 
@@ -14,7 +16,9 @@ import FooTer from '@/components/home_/FooTer.vue';
     <HeaDer2/>
     <Header3/>
     <Header4/>
-    <FooTer/>
+    <FifthHeader/>
+    <FooterPage/>
+
 
 </template>
 <style>

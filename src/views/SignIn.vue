@@ -7,7 +7,7 @@
       <!-- Second column (shorter) -->
       <div class="flex-1 border p-5">
         <div className="p-5">
-            <p className="text-4xl py-5">Sign up</p>
+            <p className="text-4xl py-5">Sign In</p>
             <p className="text-xs">Welcome to Chakri Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus placeat officiis, laboriosam ex totam culpa. Minima magnam aliquid quae facere. </p>
 
             
@@ -32,8 +32,8 @@
 
 <div className="mt-10 float-bottom  text-gray-400">
   
-    <span>Already a memeber</span>
-    <span className="text-blue-700 font-semibold"> Sign In</span>
+    <span>Are You New</span>
+    <span className="text-blue-700 font-semibold"> Sign Up</span>
 </div>
         </div>
       </div>
