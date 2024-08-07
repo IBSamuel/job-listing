@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import NavBar from "@/components/admin/Navbar.vue";
 import axios from 'axios';
-
+import Swal from 'sweetalert2';
 
 const jobTitle = ref("");
 const location = ref("");
@@ -38,8 +38,18 @@ const handleSubmit = () => {
   axios.post('http://127.0.0.1:8000/api/job', formData)
   .then((result) => {
     console.log(result);
+    Swal.fire({
+      icon: 'success',
+      title: 'Success',
+      text: 'Job uploaded successfully!',
+    });
   }).catch((err) => {
     console.log(err);
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Failed to upload job!',
+    });
   });
 };
 
@@ -72,6 +82,7 @@ const getLocation = () => {
   }
 };
 </script>
+
 <template>
   <NavBar />
   <div>
